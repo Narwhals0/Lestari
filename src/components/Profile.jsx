@@ -1,3 +1,5 @@
+import Navbar from "./Navbar";
+
 const Profile = () => {
   const recentActivities = [
     {
@@ -63,6 +65,7 @@ const Profile = () => {
   ];
 
   return (
+    <>
     <div className="max-w-sm mx-auto p-8 bg-[#F7FBEA] pb-20">
       <div className="flex flex-col items-center">
         <div className="flex items-center mb-10">
@@ -73,7 +76,7 @@ const Profile = () => {
         </div>
         <div className="size-32 bg-gray-300 rounded-full mb-3 overflow-hidden border-2 border-[#F7FBEA] ring-8 ring-[#F7FBEA] outline outline-[#5E8532] outline-2 shadow-lg drop-shadow-sm shadow-black">
           <img
-            src="public\images\orang.jfif"
+            src="src\assets\profile.png"
             alt="Profile"
             className="object-cover w-full h-full"
           />
@@ -171,6 +174,8 @@ const Profile = () => {
         ))}
       </div>
     </div>
+    <Navbar />
+    </>
   );
 };
 
