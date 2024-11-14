@@ -10,7 +10,7 @@ const Article = () => {
           <Link to="/" className="absolute left-0">
             <img src={arrow} alt="Back" className="w-7" />
           </Link>
-          <h1 className="font-extrabold text-xl text-center w-full">
+          <h1 className="font-bold text-xl text-center w-full">
             Drop Point
           </h1>
         </div>

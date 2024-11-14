@@ -1,26 +1,28 @@
 import React, { useState } from "react";
+import Navbar from "./Navbar";
 
 const Gifts = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedVoucher, setSelectedVoucher] = useState(null);
 
   return (
-    <div className="min-h-screen max-w-xs mx-auto bg-[#f1f7ec] p-4 font-sans text-gray-800">
+    <>
+    <div className="min-h-screen max-w-xs mx-auto bg-[#f1f7ec] p-4 font-sans text-gray-800 mb-20">
       {/* Gift Header */}
         <h1 className="font-extrabold text-xl text-center mb-3">Gift</h1>
 
       {/* Greeting Message */}
       <div className="text-left mb-6">
-        <p className="text-md font-semibold">Hello Rian,</p>
-        <p className="text-xs text-gray-600">Welcome to Gift Page!</p>
+        <p className="text-lg font-semibold">Hello Rian,</p>
+        <p className="text-md text-gray-600">Welcome to Gift Page!</p>
       </div>
 
       {/* Main Card */}
       <div className="bg-[#6fad2e] p-4 rounded-xl mb-6 text-white relative flex justify-between items-center">
         {/* Left section: Current Points */}
         <div className="flex flex-col items-start">
-          <p className="text-xs font-medium">Current Points</p>
-          <p className="text-3xl font-bold">521</p>
+          <p className="text-md font-medium">Current Points</p>
+          <p className="text-2xl font-bold">521</p>
           <button className="mt-2 bg-white text-[#6fad2e] px-4 py-1 rounded-full text-xs font-semibold z-10">Your Reward</button>
         </div>
 
@@ -97,7 +99,7 @@ const Gifts = () => {
                 setShowPopup(true);
               }}
             >
-              <img src="src/assets/coins-solid.svg" alt="Coins" className="h-3 w-3" />
+              <img src="src/assets/coins-solid.svg" alt="Coins" className="h-3 w-2" />
               <span>1000</span>
             </button>
           </div>
@@ -200,6 +202,8 @@ const Gifts = () => {
         </div>
       )}
     </div>
+    <Navbar />
+    </>
   );
 };
 

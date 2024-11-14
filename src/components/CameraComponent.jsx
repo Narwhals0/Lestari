@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import QrReader from 'react-qr-scanner';
+import Navbar from './Navbar';
 
 const CameraComponent = () => {
   const [result, setResult] = useState('No result');
@@ -21,7 +22,8 @@ const CameraComponent = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 bg-[#f1f7ec]">
       <div className="bg-white p-6 rounded-lg shadow-lg w-96">
         <h1 className="text-2xl font-semibold text-center mb-4">QR Code Scanner</h1>
         
@@ -35,17 +37,10 @@ const CameraComponent = () => {
         <div className="mt-4 text-center">
           <p className="text-lg">{result}</p>
         </div>
-
-        <div className="mt-4 text-center">
-          <button
-            className="bg-blue-500 text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition"
-            onClick={() => alert('QR Code Captured')}
-          >
-            Capture QR Code
-          </button>
-        </div>
       </div>
     </div>
+    <Navbar />
+    </>
   );
 };
 

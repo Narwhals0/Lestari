@@ -17,7 +17,7 @@ const DropPointDetail = () => {
         <Link to="/drop-point" className="flex-shrink-0">
           <img src={arrow} alt="Back" className="w-7" />
         </Link>
-        <h1 className="font-extrabold text-xl">{dropPoint.name}</h1>
+        <h1 className="font-bold text-md">{dropPoint.name}</h1>
       </div>
       <div className="flex justify-center">
         <img

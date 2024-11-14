@@ -17,7 +17,7 @@ const ArticleDetail = () => {
         <Link to="/article" className="flex-shrink-0">
           <img src={arrow} alt="Back" className="w-7" />
         </Link>
-        <h1 className="font-extrabold text-xl">{article.title}</h1>
+        <h1 className="font-bold text-xl">{article.title}</h1>
       </div>
       <img
         src={article.image}

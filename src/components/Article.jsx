@@ -9,7 +9,7 @@ const Article = () => {
         <Link to="/" className="absolute left-0">
           <img src={arrow} alt="Back" className="w-7"/>
         </Link>
-        <h1 className="font-extrabold text-xl text-center w-full">Article</h1>
+        <h1 className="font-bold text-xl text-center w-full">Article</h1>
       </div>
       <div className="flex flex-col gap-5">
         {articles.map((article) => (

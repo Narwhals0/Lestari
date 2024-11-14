@@ -5,19 +5,21 @@ import clock from "../assets/clock.svg";
 import recycle from "../assets/recycle.svg";
 import trash from "../assets/trash.svg";
 import dropPoints from "../data/droppoint";
+import Navbar from './Navbar';
 
 const Home = () => {
 
   const dropPoint = dropPoints[1];
 
   return (
-    <div className="flex flex-col gap-9 m-5">
-      <h1 className="font-extrabold text-xl text-center">Home</h1>
+    <>
+    <div className="flex flex-col gap-9 m-5 mb-20">
+      <h1 className="font-bold text-xl text-center">Home</h1>
       <div className="flex flex-col gap-5">
         {/* Greetings */}
         <div>
-          <h2 className="font-extrabold text-md">Hello, Rian</h2>
-          <small className="text-gray-500">Welcome!</small>
+          <h2 className="font-bold text-lg">Hello, Rian</h2>
+          <small className="text-gray-500 text-lg">Welcome!</small>
         </div>
         {/* card */}
         <div className="p-5 border-2 border-lime-500 rounded-3xl bg-white shadow-lg shadow-gray-700">
@@ -26,13 +28,13 @@ const Home = () => {
             {/* Image */}
             <div className="w-14 h-14 bg-white rounded-full border-2 border-gray-300 flex items-center justify-center shadow-md shadow-gray-700">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQRKi6lszXdYoY385Am9lPSWzo9zevrKLuA&s"
+                src="src\assets\profile.png"
                 alt=""
                 className="w-14 h-14 rounded-full object-cover"
               />
             </div>
             {/* Profile */}
-            <div className="flex-col w-36">
+            <div className="flex-col w-2/3">
               <p className="font-bold">Rian Edward</p>
               <small className="font-bold text-gray-500">
                 Level 4 Gold Member
@@ -50,11 +52,11 @@ const Home = () => {
           <div className="flex gap-5 justify-center mt-5">
             <div className="flex items-center gap-3">
               <h3 className="font-bold text-sm text-gray-500">Points</h3>
-              <p className="font-extrabold text-lg text-yellow-400">521</p>
+              <p className="font-bold text-lg text-yellow-400">521</p>
             </div>
             <div className="flex items-center gap-3">
               <h3 className="font-bold text-sm text-gray-500">Transactions</h3>
-              <p className="font-extrabold text-lg text-yellow-400">21</p>
+              <p className="font-bold text-lg text-yellow-400">21</p>
             </div>
           </div>
         </div>
@@ -62,7 +64,7 @@ const Home = () => {
       {/* Drop Point */}
       <div className="flex flex-col gap-3">
         <div className="flex justify-between items-center">
-          <h2 className="font-bold text-md">Lokasi Terdekat</h2>
+          <h2 className="font-bold text-lg">Lokasi Terdekat</h2>
           <Link to="/drop-point" className="text-gray-500 text-xs">
             See All
           </Link>
@@ -103,7 +105,7 @@ const Home = () => {
       {/* Articles Section */}
       <div className="flex flex-col gap-3">
         <div className="flex justify-between items-center">
-          <h2 className="font-bold text-md">Artikel</h2>
+          <h2 className="font-bold text-lg">Artikel</h2>
           <a href="/article" className="text-gray-500 text-xs">
             See All
           </a>
@@ -124,6 +126,8 @@ const Home = () => {
         </div>
       </div>
     </div>
+    <Navbar />
+    </>
   );
 };
 
