@@ -4,9 +4,12 @@ import arrow from "../assets/arrow.svg";
 import clock from "../assets/clock.svg";
 import recycle from "../assets/recycle.svg";
 import trash from "../assets/trash.svg";
-import dropPoint from "../assets/dp1.jpg";
+import dropPoints from "../data/droppoint";
 
 const Home = () => {
+
+  const dropPoint = dropPoints[1];
+
   return (
     <div className="flex flex-col gap-9 m-5">
       <h1 className="font-extrabold text-xl text-center">Home</h1>
@@ -64,53 +67,50 @@ const Home = () => {
       <div className="flex flex-col gap-3">
         <div className="flex justify-between items-center">
           <h2 className="font-bold text-md">Lokasi Terdekat</h2>
-          <Link to="/droppoint" className="text-gray-500 text-xs">
+          <Link to="/drop-point" className="text-gray-500 text-xs">
             See All
           </Link>
         </div>
         {/* Card */}
-        <a
-          href=""
+        <Link
+          to="/drop-point/2"
           className="flex justify-between p-5 rounded-3xl bg-white shadow-lg shadow-gray-700"
         >
           {/* DP information */}
           <div className="flex flex-col gap-3">
             <div className="flex gap-2 items-center">
-              <div className="flex bg-red-500 w-9 h-9 items-center justify-center rounded-full">
-                <p className="font-extrabold text-white">A</p>
-              </div>
-              <h2 className="font-bold text-md">Central Station</h2>
+              <h2 className="font-bold text-md">{dropPoint.name}</h2>
             </div>
             <div className="flex gap-2 items-center">
               <img src={recycle} alt="" className="w-5" />
-              <small className="text-gray-500">150 m | 3min</small>
+              <small className="text-gray-500">{dropPoint.distance} | {dropPoint.duration}</small>
             </div>
             <div className="flex gap-2 items-center">
               <img src={clock} alt="" className="w-5" />
-              <small className="text-lime-700">Open 24 hours</small>
+              <small className="text-lime-700">{dropPoint.open}</small>
             </div>
             <div className="flex gap-2 items-center">
               <img src={trash} alt="" className="w-5" />
-              <small className="text-orange-500">30% of space available</small>
+              <small className="text-orange-500">{dropPoint.space}</small>
             </div>
           </div>
           {/* dp image */}
           <div className="flex w-1/3 items-center">
             <img
-              src={dropPoint}
+              src={dropPoint.image}
               alt=""
               className="w-24 h-24 rounded-xl object-cover shadow-lg"
             />
           </div>
-        </a>
+        </Link>
       </div>
       {/* Articles Section */}
       <div className="flex flex-col gap-3">
         <div className="flex justify-between items-center">
           <h2 className="font-bold text-md">Artikel</h2>
-          <Link to="/article" className="text-gray-500 text-xs">
+          <a href="/article" className="text-gray-500 text-xs">
             See All
-          </Link>
+          </a>
         </div>
         <div className="flex overflow-x-scroll gap-5">
           {articles.map((article) => (
