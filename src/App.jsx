@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Gifts from './components/Gifts';
 import Camera from './components/CameraComponent';
+import Profile from './components/Profile';
 
 const App = () => {
     return (
@@ -23,6 +24,7 @@ const App = () => {
                 <Route path="/article/:id" element={<ArticleDetail />} />
                 <Route path="/drop-point" element={<DropPoint />} />
                 <Route path="/drop-point/:id" element={<DropPointDetail />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
         </Router>
     );

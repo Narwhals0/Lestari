@@ -6,7 +6,7 @@ const Navbar = () => {
     { icon: "home-outline", path: "/", dis: "translate-x-0" },
     { icon: "trash-outline", path: "/camera", dis: "translate-x-16" },
     { icon: "gift-outline", path: "/gifts", dis: "translate-x-32" },
-    { icon: "person-outline", path: "/profile", dis: "translate-x-48" }, // Assuming /profile for this one
+    { icon: "person-outline", path: "/profile", dis: "translate-x-48" },
   ];
 
   const location = useLocation();
