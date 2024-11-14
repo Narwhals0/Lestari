@@ -45,10 +45,6 @@ const Home = () => {
                 <p className="text-xs font-semibold text-gray-500">75%</p>
               </div>
             </div>
-            {/* Button */}
-            <a href="" className="w-9 h-9 m-auto">
-              <img className="w-9 h-9" src={arrow} alt="" />
-            </a>
           </div>
           {/* Status */}
           <div className="flex gap-5 justify-center mt-5">

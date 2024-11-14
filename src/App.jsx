@@ -6,6 +6,9 @@ import DropPoint from './components/DropPoint';
 import DropPointDetail from './components/DropPointDetail';
 import Home from './components/Home';
 import Login from './components/Login';
+import Register from './components/Register';
+import Gifts from './components/Gifts';
+import Camera from './components/CameraComponent';
 
 const App = () => {
     return (
@@ -13,6 +16,9 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/gifts" element={<Gifts />} />
+                <Route path="/camera" element={<Camera />} />
                 <Route path="/article" element={<Article />} />
                 <Route path="/article/:id" element={<ArticleDetail />} />
                 <Route path="/drop-point" element={<DropPoint />} />
