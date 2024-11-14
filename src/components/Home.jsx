@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import articles from "../data/articles";
-import arrow from "../assets/arrow.svg";
 import clock from "../assets/clock.svg";
 import recycle from "../assets/recycle.svg";
 import trash from "../assets/trash.svg";
@@ -32,7 +31,7 @@ const Home = () => {
               />
             </div>
             {/* Profile */}
-            <div className="flex-col w-36">
+            <div className="flex-col w-2/3">
               <p className="font-bold">Rian Edward</p>
               <small className="font-bold text-gray-500">
                 Level 4 Gold Member
