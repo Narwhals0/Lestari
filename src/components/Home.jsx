@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import articles from "../data/articles";
-import arrow from "../assets/arrow.svg";
 import clock from "../assets/clock.svg";
 import recycle from "../assets/recycle.svg";
 import trash from "../assets/trash.svg";
