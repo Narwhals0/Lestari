@@ -17,7 +17,7 @@ const Navbar = () => {
     const activeIndex = Menus.findIndex((menu) => menu.path === location.pathname);
     setActive(activeIndex === -1 ? 0 : activeIndex); // Default to 0 if not found
   }, [location, Menus]);
-
+  
   return (
     <div className="flex justify-center fixed bottom-0 w-screen">
       <div className="bg-[rgb(94,133,50)] max-h-[4.4rem] pb-5 rounded-t-xl w-full flex justify-center">
